@@ -1,0 +1,441 @@
+/* Navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    background-color: #2d8ee4;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    max-width: 100%;
+    height: auto;
+    width: 130px;
+    transition: width 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-end; /* Alineación a la derecha en escritorio */
+}
+
+nav ul li {
+    padding: 15px 20px; /* Ajusta el padding para hacer los cuadros más grandes */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+nav ul li a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Otros estilos existentes */
+
+#hero {
+    text-align: center;
+    padding: 20px; /* Ajusta el padding para reducir la altura */
+    background-color: #a09d9d;
+}
+
+#hero h4, #hero h5 {
+    margin-bottom: 10px; /* Espacio entre los textos */
+}
+
+.centered-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra los íconos verticalmente */
+    margin-top: 10px; /* Reduce el margen superior */
+}
+
+.centered-icons .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre los íconos */
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 50px;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background-color: #2d8ee4;
+        top: 60px;
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        justify-content: center; /* Centrar elementos verticalmente en móvil */
+        align-items: center; /* Centrar elementos horizontalmente en móvil */
+    }
+
+    nav ul.show {
+        display: flex;
+        opacity: 1;
+        max-height: 400px; /* Ajusta esta altura según sea necesario */
+    }
+
+    nav ul li {
+        text-align: center; /* Centrar texto de cada elemento en móvil */
+        width: 100%;
+        padding: 20px 0; /* Ajusta el padding para hacer los cuadros más grandes en móvil */
+    }
+
+    #info p {
+        font-size: 14px; /* Cambia este valor según tus necesidades */
+        line-height: 1.4; /* Ajusta la altura de línea para mejorar la legibilidad si es necesario */
+    }
+
+    /* Reducir el área gris en la vista de celular */
+    #hero {
+        padding: 10px 5px; /* Ajusta este valor según sea necesario para reducir el área gris */
+    }
+
+    #hero h4, #hero h5 {
+        margin-bottom: 5px; /* Ajusta el margen para reducir el espacio vertical */
+    }
+
+    .centered-icons .social-icons {
+        gap: 20px; /* Reduce el espacio entre los íconos */
+    }
+
+    /* Ajustar imágenes para que ocupen todo el ancho en la vista móvil */
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex !important; /* Asegura que el menú esté visible en escritorio */
+        opacity: 1 !important;
+    }
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero {
+    text-align: center;
+    padding: 20px;
+    background-color: #a09d9d;
+}
+
+#servicios {
+    text-align: center;
+    padding: 20px;
+}
+
+#servicios h2 {
+    margin-bottom: 10px;
+}
+
+#servicios h3 {
+    margin-bottom: 30px;
+}
+
+#info {
+    text-align: left;
+    padding: 20px;
+    justify-content: normal;
+    margin-top: 40px;
+}
+
+#info h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#info h3 {
+    margin-bottom: 10px;
+}
+
+#info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#servicios h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#servicios p {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+#horario {
+    text-align: left;
+    padding: 20px;
+    justify-content: normal;
+}
+
+#horario h1 {
+    text-align: center;
+    padding: 20px;
+    justify-content: normal;
+    margin-top: 25px;
+}
+
+#horario h3 {
+    margin-bottom: 10px;
+}
+
+#horario h4 {
+    margin-bottom: 20px;
+}
+
+#ubicacion {
+    text-align: left;
+    padding: 20px;
+    justify-content: normal;
+}
+
+#ubicacion h2 {
+    margin-bottom: 10px;
+}
+
+/* Añadir espacio entre el texto y el mapa */
+#ubicacion p {
+    margin-bottom: 20px; /* Ajusta este valor según sea necesario */
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+    background-color: #0084FF;
+}
+
+.card.hidden {
+    transform: translateY(-10px);
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.card:not(.hidden) {
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.show-more-btn:hover {
+    background-color: #94beeb;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+contact-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+}
+
+.messenger-button {
+    background-color: #0084FF;
+    color: white;
+}
+
+/* Carrusel */
+.swiper-container {
+    width: 100%;
+    height: 400px; /* Ajustar la altura para cubrir más espacio en móviles */
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    width: 100%; /* Ajusta la imagen al 100% del ancho del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen para cubrir el contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+@media (min-width: 768px) {
+    .swiper-container {
+        height: 475px; /* Altura fija para escritorio */
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-container {
+        height: 400px; /* Ajustar la altura automáticamente para móviles */
+    }
+}
+
+/* Footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #2d8ee4;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #000000;
+    flex: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 50px;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center; /* Cambiar a center para centrar el texto */
+    }
+
+    .footer-text {
+        font-size: 10px; /* Reducir el tamaño del texto en móvil */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
